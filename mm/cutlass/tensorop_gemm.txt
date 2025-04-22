@@ -1,0 +1,30 @@
+=============================
+  Problem ID: 1
+
+        Provider: CUTLASS
+   OperationKind: gemm
+       Operation: cutlass_tensorop_s1688gemm_f16_256x128_32x2_nn_align8
+
+          Status: Success
+    Verification: ON
+     Disposition: Passed
+
+reference_device: Passed
+          cuBLAS: Not run
+           cuDNN: Not run
+
+       Arguments: --gemm_kind=universal --m=7168 --n=7168 --k=7168 --A=f16:column --B=f16:column --C=f32:column --D=f32:column  \
+                  --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1 --batch_count=1 --raster_order=along_n  \
+                  --runtime_input_datatype_a=invalid --runtime_input_datatype_b=invalid --use_pdl=false --enable_sm90_mixed_dtype_shuffle_test=false  \
+                  --swizzle_size=1 --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --cluster_m=1 --cluster_n=1  \
+                  --cluster_k=1 --cluster_m_fallback=0 --cluster_n_fallback=0 --cluster_k_fallback=0 --stages=2 --warps_m=4  \
+                  --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 411041792  bytes
+           FLOPs: 736689651712  flops
+           FLOPs/Byte: 1792
+
+         Runtime: 37.5218  ms
+          Memory: 10.2024 GiB/s
+
+            Math: 19633.7 GFLOP/s
