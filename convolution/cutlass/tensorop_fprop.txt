@@ -1,0 +1,2235 @@
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688fprop_optimized_f16_256x128_32x2_nhwc_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 434176  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 43
+
+         Runtime: 0.0501965  ms
+          Memory: 8.0555 GiB/s
+
+            Math: 376.663 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_f16_s1688fprop_optimized_f16_256x128_32x2_nhwc_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.051241  ms
+          Memory: 7.29573 GiB/s
+
+            Math: 368.985 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688fprop_few_channels_f16_128x64_32x2_nhwc_align1
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=few_channels --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=128 --cta_n=64 --cta_k=32 --stages=2  \
+                  --warps_m=2 --warps_n=4 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 434176  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 43
+
+         Runtime: 0.0617779  ms
+          Memory: 6.54535 GiB/s
+
+            Math: 306.05 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_f16_s1688fprop_few_channels_f16_128x64_32x2_nhwc_align1
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=few_channels --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=128 --cta_n=64 --cta_k=32 --stages=2  \
+                  --warps_m=2 --warps_n=4 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.061655  ms
+          Memory: 6.06342 GiB/s
+
+            Math: 306.66 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_h1688fprop_optimized_256x128_32x2_nhwc_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f16 --cta_m=256 --cta_n=128 --cta_k=32 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.0261939  ms
+          Memory: 14.272 GiB/s
+
+            Math: 721.814 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_h1688fprop_few_channels_128x64_32x2_nhwc_align1
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=few_channels --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f16 --cta_m=128 --cta_n=64 --cta_k=32 --stages=2  \
+                  --warps_m=2 --warps_n=4 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.0563302  ms
+          Memory: 6.63658 GiB/s
+
+            Math: 335.648 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i8816fprop_optimized_s8_256x128_64x2_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nhwc --Filter=s8:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=16 --min_cc=75 --max_cc=1024
+
+           Bytes: 249856  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 75
+
+         Runtime: 0.0158925  ms
+          Memory: 14.6419 GiB/s
+
+            Math: 1189.69 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s8_i8816fprop_optimized_s8_256x128_64x2_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nhwc --Filter=s8:nhwc --Output=s8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=16 --min_cc=75 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0175616  ms
+          Memory: 10.6437 GiB/s
+
+            Math: 1076.62 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s8_i8816fprop_few_channels_s8_256x128_64x2_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nhwc --Filter=s8:nhwc --Output=s8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=few_channels --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=16 --min_cc=75 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0207872  ms
+          Memory: 8.99208 GiB/s
+
+            Math: 909.557 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i8816fprop_optimized_u8_256x128_64x2_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nhwc --Filter=u8:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=16 --min_cc=75 --max_cc=1024
+
+           Bytes: 249856  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 75
+
+         Runtime: 0.0158822  ms
+          Memory: 14.6514 GiB/s
+
+            Math: 1190.46 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u8_i8816fprop_optimized_u8_256x128_64x2_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nhwc --Filter=u8:nhwc --Output=u8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=16 --min_cc=75 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0175718  ms
+          Memory: 10.6375 GiB/s
+
+            Math: 1075.99 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u8_i8816fprop_few_channels_u8_256x128_64x2_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nhwc --Filter=u8:nhwc --Output=u8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=few_channels --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=16 --min_cc=75 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.020777  ms
+          Memory: 8.99651 GiB/s
+
+            Math: 910.005 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s8_i8816fprop_optimized_s8_256x128_64x2_nc32hw32_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nc32hw32 --Filter=s8:c32rsk32  \
+                  --Output=s8:nc32hw32 --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial  \
+                  --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128  \
+                  --cta_k=64 --stages=2 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=16 --min_cc=75  \
+                  --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0171418  ms
+          Memory: 10.9044 GiB/s
+
+            Math: 1102.99 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u8_i8816fprop_optimized_u8_256x128_64x2_nc32hw32_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nc32hw32 --Filter=u8:c32rsk32  \
+                  --Output=u8:nc32hw32 --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial  \
+                  --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128  \
+                  --cta_k=64 --stages=2 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=16 --min_cc=75  \
+                  --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0171622  ms
+          Memory: 10.8914 GiB/s
+
+            Math: 1101.67 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i8832fprop_optimized_s4_256x128_128x2_nhwc_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s4:nhwc --Filter=s4:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=32 --min_cc=75 --max_cc=1024
+
+           Bytes: 157696  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 119
+
+         Runtime: 0.0159027  ms
+          Memory: 9.23527 GiB/s
+
+            Math: 1188.92 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s4_i8832fprop_optimized_s4_256x128_128x2_nhwc_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s4:nhwc --Filter=s4:nhwc --Output=s4:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=32 --min_cc=75 --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0174285  ms
+          Memory: 5.36249 GiB/s
+
+            Math: 1084.84 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i8832fprop_optimized_u4_256x128_128x2_nhwc_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u4:nhwc --Filter=u4:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=32 --min_cc=75 --max_cc=1024
+
+           Bytes: 157696  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 119
+
+         Runtime: 0.0158925  ms
+          Memory: 9.24122 GiB/s
+
+            Math: 1189.69 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u4_i8832fprop_optimized_u4_256x128_128x2_nhwc_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u4:nhwc --Filter=u4:nhwc --Output=u4:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=2  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=32 --min_cc=75 --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0174285  ms
+          Memory: 5.36249 GiB/s
+
+            Math: 1084.84 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s4_i8832fprop_optimized_s4_256x128_128x2_nc64hw64_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s4:nc64hw64 --Filter=s4:c64rsk64  \
+                  --Output=s4:nc64hw64 --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial  \
+                  --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128  \
+                  --cta_k=128 --stages=2 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=32 --min_cc=75  \
+                  --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0170496  ms
+          Memory: 5.48166 GiB/s
+
+            Math: 1108.95 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u4_i8832fprop_optimized_u4_256x128_128x2_nc64hw64_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u4:nc64hw64 --Filter=u4:c64rsk64  \
+                  --Output=u4:nc64hw64 --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial  \
+                  --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128  \
+                  --cta_k=128 --stages=2 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=8 --inst_n=8 --inst_k=32 --min_cc=75  \
+                  --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0170291  ms
+          Memory: 5.48825 GiB/s
+
+            Math: 1110.28 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s16816fprop_optimized_f16_256x128_32x3_nhwc_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 434176  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 43
+
+         Runtime: 0.0475034  ms
+          Memory: 8.5122 GiB/s
+
+            Math: 398.017 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s16816fprop_optimized_f16_256x128_32x3_nhwc_single_group_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 434176  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 43
+
+         Runtime: 0.0474624  ms
+          Memory: 8.51954 GiB/s
+
+            Math: 398.36 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_f16_s16816fprop_optimized_f16_256x128_32x3_nhwc_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.0473498  ms
+          Memory: 7.8953 GiB/s
+
+            Math: 399.308 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_f16_s16816fprop_optimized_f16_256x128_32x3_nhwc_single_group_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.0474829  ms
+          Memory: 7.87316 GiB/s
+
+            Math: 398.188 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_h16816fprop_optimized_256x128_32x3_nhwc_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f16 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.0265216  ms
+          Memory: 14.0957 GiB/s
+
+            Math: 712.896 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_h16816fprop_optimized_256x128_32x3_nhwc_single_group_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f16:nhwc --Filter=f16:nhwc --Output=f16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f16 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.026368  ms
+          Memory: 14.1778 GiB/s
+
+            Math: 717.049 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s16816fprop_optimized_bf16_256x128_32x3_nhwc_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=bf16:nhwc --Filter=bf16:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 434176  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 43
+
+         Runtime: 0.0475238  ms
+          Memory: 8.50853 GiB/s
+
+            Math: 397.845 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s16816fprop_optimized_bf16_256x128_32x3_nhwc_single_group_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=bf16:nhwc --Filter=bf16:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 434176  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 43
+
+         Runtime: 0.0474726  ms
+          Memory: 8.5177 GiB/s
+
+            Math: 398.274 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_bf16_s16816fprop_optimized_bf16_256x128_32x3_nhwc_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=bf16:nhwc --Filter=bf16:nhwc --Output=bf16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.0478003  ms
+          Memory: 7.82087 GiB/s
+
+            Math: 395.544 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_bf16_s16816fprop_optimized_bf16_256x128_32x3_nhwc_single_group_align8
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=bf16:nhwc --Filter=bf16:nhwc --Output=bf16:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 401408  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 47
+
+         Runtime: 0.0479539  ms
+          Memory: 7.79582 GiB/s
+
+            Math: 394.277 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688fprop_optimized_tf32_256x128_16x3_nhwc_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=tf32:nhwc --Filter=tf32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.089129  ms
+          Memory: 8.38875 GiB/s
+
+            Math: 212.132 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688fprop_optimized_tf32_256x128_16x3_nhwc_single_group_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=tf32:nhwc --Filter=tf32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.0889856  ms
+          Memory: 8.40227 GiB/s
+
+            Math: 212.474 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_tf32_s1688fprop_optimized_tf32_256x128_16x3_nhwc_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=tf32:nhwc --Filter=tf32:nhwc --Output=tf32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.0950166  ms
+          Memory: 7.86894 GiB/s
+
+            Math: 198.988 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_tf32_s1688fprop_optimized_tf32_256x128_16x3_nhwc_single_group_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=tf32:nhwc --Filter=tf32:nhwc --Output=tf32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.0952115  ms
+          Memory: 7.85284 GiB/s
+
+            Math: 198.58 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688tf32fprop_optimized_256x128_16x3_nhwc_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f32:nhwc --Filter=f32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.0896717  ms
+          Memory: 8.33798 GiB/s
+
+            Math: 210.848 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688tf32fprop_optimized_256x128_16x3_nhwc_single_group_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f32:nhwc --Filter=f32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.0898867  ms
+          Memory: 8.31803 GiB/s
+
+            Math: 210.344 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688f16fprop_optimized_256x128_16x3_nhwc_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f32:nhwc --Filter=f32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.0484557  ms
+          Memory: 15.4302 GiB/s
+
+            Math: 390.194 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688f16fprop_optimized_256x128_16x3_nhwc_single_group_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f32:nhwc --Filter=f32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=75 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.0484557  ms
+          Memory: 15.4302 GiB/s
+
+            Math: 390.194 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688bf16fprop_optimized_256x128_16x3_nhwc_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f32:nhwc --Filter=f32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.0483123  ms
+          Memory: 15.476 GiB/s
+
+            Math: 391.352 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688bf16fprop_optimized_256x128_16x3_nhwc_single_group_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f32:nhwc --Filter=f32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=256 --cta_n=128 --cta_k=16 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.048425  ms
+          Memory: 15.44 GiB/s
+
+            Math: 390.442 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688fprop_optimized_128x128_16x4_nhwc_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f32:nhwc --Filter=f32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=128 --cta_n=128 --cta_k=16 --stages=4  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.133069  ms
+          Memory: 5.61875 GiB/s
+
+            Math: 142.085 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s1688fprop_optimized_128x128_16x4_nhwc_single_group_align4
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=f32:nhwc --Filter=f32:nhwc --Output=f32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=f32 --cta_m=128 --cta_n=128 --cta_k=16 --stages=4  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=8 --min_cc=80 --max_cc=1024
+
+           Bytes: 802816  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 23
+
+         Runtime: 0.132618  ms
+          Memory: 5.63784 GiB/s
+
+            Math: 142.568 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i16832fprop_optimized_s8_256x128_64x3_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nhwc --Filter=s8:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 249856  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 75
+
+         Runtime: 0.016128  ms
+          Memory: 14.4281 GiB/s
+
+            Math: 1172.32 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i16832fprop_optimized_s8_256x128_64x3_nhwc_single_group_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nhwc --Filter=s8:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 249856  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 75
+
+         Runtime: 0.016343  ms
+          Memory: 14.2383 GiB/s
+
+            Math: 1156.89 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s8_i16832fprop_optimized_s8_256x128_64x3_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nhwc --Filter=s8:nhwc --Output=s8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.01792  ms
+          Memory: 10.4308 GiB/s
+
+            Math: 1055.09 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s8_i16832fprop_optimized_s8_256x128_64x3_nhwc_single_group_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nhwc --Filter=s8:nhwc --Output=s8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0180122  ms
+          Memory: 10.3774 GiB/s
+
+            Math: 1049.69 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s8_i16832fprop_few_channels_s8_256x128_64x3_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nhwc --Filter=s8:nhwc --Output=s8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=few_channels --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0227942  ms
+          Memory: 8.20032 GiB/s
+
+            Math: 829.47 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i16832fprop_optimized_u8_256x128_64x3_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nhwc --Filter=u8:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 249856  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 75
+
+         Runtime: 0.0161485  ms
+          Memory: 14.4098 GiB/s
+
+            Math: 1170.83 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i16832fprop_optimized_u8_256x128_64x3_nhwc_single_group_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nhwc --Filter=u8:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 249856  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 75
+
+         Runtime: 0.0163533  ms
+          Memory: 14.2293 GiB/s
+
+            Math: 1156.17 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u8_i16832fprop_optimized_u8_256x128_64x3_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nhwc --Filter=u8:nhwc --Output=u8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0179302  ms
+          Memory: 10.4249 GiB/s
+
+            Math: 1054.48 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u8_i16832fprop_optimized_u8_256x128_64x3_nhwc_single_group_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nhwc --Filter=u8:nhwc --Output=u8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0179917  ms
+          Memory: 10.3893 GiB/s
+
+            Math: 1050.88 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u8_i16832fprop_few_channels_u8_256x128_64x3_nhwc_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nhwc --Filter=u8:nhwc --Output=u8:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=few_channels --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=64 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80 --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.022743  ms
+          Memory: 8.21879 GiB/s
+
+            Math: 831.337 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s8_i16832fprop_optimized_s8_256x128_64x3_nc32hw32_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s8:nc32hw32 --Filter=s8:c32rsk32  \
+                  --Output=s8:nc32hw32 --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial  \
+                  --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128  \
+                  --cta_k=64 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80  \
+                  --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.0174387  ms
+          Memory: 10.7187 GiB/s
+
+            Math: 1084.2 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u8_i16832fprop_optimized_u8_256x128_64x3_nc32hw32_align16
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u8:nc32hw32 --Filter=u8:c32rsk32  \
+                  --Output=u8:nc32hw32 --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial  \
+                  --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128  \
+                  --cta_k=64 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=32 --min_cc=80  \
+                  --max_cc=1024
+
+           Bytes: 200704  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 94
+
+         Runtime: 0.017449  ms
+          Memory: 10.7124 GiB/s
+
+            Math: 1083.57 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i16864fprop_optimized_s4_256x128_128x3_nhwc_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s4:nhwc --Filter=s4:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80 --max_cc=1024
+
+           Bytes: 157696  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 119
+
+         Runtime: 0.0160154  ms
+          Memory: 9.17031 GiB/s
+
+            Math: 1180.56 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i16864fprop_optimized_s4_256x128_128x3_nhwc_single_group_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s4:nhwc --Filter=s4:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80 --max_cc=1024
+
+           Bytes: 157696  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 119
+
+         Runtime: 0.0162509  ms
+          Memory: 9.03741 GiB/s
+
+            Math: 1163.45 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s4_i16864fprop_optimized_s4_256x128_128x3_nhwc_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s4:nhwc --Filter=s4:nhwc --Output=s4:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80 --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0177562  ms
+          Memory: 5.26353 GiB/s
+
+            Math: 1064.82 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s4_i16864fprop_optimized_s4_256x128_128x3_nhwc_single_group_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s4:nhwc --Filter=s4:nhwc --Output=s4:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80 --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.01792  ms
+          Memory: 5.21541 GiB/s
+
+            Math: 1055.09 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i16864fprop_optimized_u4_256x128_128x3_nhwc_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u4:nhwc --Filter=u4:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80 --max_cc=1024
+
+           Bytes: 157696  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 119
+
+         Runtime: 0.0160256  ms
+          Memory: 9.16445 GiB/s
+
+            Math: 1179.81 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_i16864fprop_optimized_u4_256x128_128x3_nhwc_single_group_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u4:nhwc --Filter=u4:nhwc --Output=s32:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80 --max_cc=1024
+
+           Bytes: 157696  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 119
+
+         Runtime: 0.0162406  ms
+          Memory: 9.04311 GiB/s
+
+            Math: 1164.19 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u4_i16864fprop_optimized_u4_256x128_128x3_nhwc_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u4:nhwc --Filter=u4:nhwc --Output=u4:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80 --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0177357  ms
+          Memory: 5.26961 GiB/s
+
+            Math: 1066.05 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u4_i16864fprop_optimized_u4_256x128_128x3_nhwc_single_group_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [1;32mPassed[0m
+
+reference_device: Passed
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u4:nhwc --Filter=u4:nhwc --Output=u4:nhwc  \
+                  --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1  \
+                  --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128 --cta_k=128 --stages=3  \
+                  --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80 --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0179405  ms
+          Memory: 5.20945 GiB/s
+
+            Math: 1053.88 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_s4_i16864fprop_optimized_s4_256x128_128x3_nc64hw64_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=s4:nc64hw64 --Filter=s4:c64rsk64  \
+                  --Output=s4:nc64hw64 --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial  \
+                  --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128  \
+                  --cta_k=128 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80  \
+                  --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0173056  ms
+          Memory: 5.40057 GiB/s
+
+            Math: 1092.54 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv2d[0m
+       Operation: cutlass_tensorop_u4_i16864fprop_optimized_u4_256x128_128x3_nc64hw64_align32
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --h=16 --w=16 --c=64 --k=64 --r=3 --s=3 --p=16 --q=16 --g=1 --pad_h=1 --pad_w=1  \
+                  --stride_h=1 --stride_w=1 --dilation_h=1 --dilation_w=1 --Activation=u4:nc64hw64 --Filter=u4:c64rsk64  \
+                  --Output=u4:nc64hw64 --conv_mode=cross --iterator_algorithm=optimized --alpha=1 --beta=0 --split_k_mode=serial  \
+                  --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop --accum=s32 --cta_m=256 --cta_n=128  \
+                  --cta_k=128 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16 --inst_n=8 --inst_k=64 --min_cc=80  \
+                  --max_cc=1024
+
+           Bytes: 100352  bytes
+           FLOPs: 18907136  flops
+           FLOPs/Byte: 188
+
+         Runtime: 0.0172954  ms
+          Memory: 5.40377 GiB/s
+
+            Math: 1093.19 GFLOP/s
+
+
+=============================
+
+CSV Results:
+
+Problem,Provider,OperationKind,Operation,Disposition,Status,conv_kind,n,h,w,c,k,r,s,p,q,g,pad_h,pad_w,stride_h,stride_w,dilation_h,dilation_w,Activation,Filter,Output,conv_mode,iterator_algorithm,alpha,beta,split_k_mode,split_k_slices,eq_gemm_provider,op_class,accum,cta_m,cta_n,cta_k,cluster_m,cluster_n,cluster_k,cluster_m_fallback,cluster_n_fallback,cluster_k_fallback,stages,warps_m,warps_n,warps_k,inst_m,inst_n,inst_k,min_cc,max_cc,Bytes,Flops,Flops/Byte,Runtime,GB/s,GFLOPs
+1,CUTLASS,conv2d,cutlass_tensorop_i8816fprop_optimized_u8_256x128_64x2_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nhwc,u8:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,2,4,2,1,8,8,16,75,1024,249856,18907136,75,0.0158822,14.6514,1190.46
+1,CUTLASS,conv2d,cutlass_tensorop_i8816fprop_optimized_s8_256x128_64x2_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nhwc,s8:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,2,4,2,1,8,8,16,75,1024,249856,18907136,75,0.0158925,14.6419,1189.69
+1,CUTLASS,conv2d,cutlass_tensorop_i8832fprop_optimized_u4_256x128_128x2_nhwc_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u4:nhwc,u4:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,2,4,2,1,8,8,32,75,1024,157696,18907136,119,0.0158925,9.24122,1189.69
+1,CUTLASS,conv2d,cutlass_tensorop_i8832fprop_optimized_s4_256x128_128x2_nhwc_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s4:nhwc,s4:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,2,4,2,1,8,8,32,75,1024,157696,18907136,119,0.0159027,9.23527,1188.92
+1,CUTLASS,conv2d,cutlass_tensorop_i16864fprop_optimized_s4_256x128_128x3_nhwc_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s4:nhwc,s4:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,157696,18907136,119,0.0160154,9.17031,1180.56
+1,CUTLASS,conv2d,cutlass_tensorop_i16864fprop_optimized_u4_256x128_128x3_nhwc_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u4:nhwc,u4:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,157696,18907136,119,0.0160256,9.16445,1179.81
+1,CUTLASS,conv2d,cutlass_tensorop_i16832fprop_optimized_s8_256x128_64x3_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nhwc,s8:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,249856,18907136,75,0.016128,14.4281,1172.32
+1,CUTLASS,conv2d,cutlass_tensorop_i16832fprop_optimized_u8_256x128_64x3_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nhwc,u8:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,249856,18907136,75,0.0161485,14.4098,1170.83
+1,CUTLASS,conv2d,cutlass_tensorop_i16864fprop_optimized_u4_256x128_128x3_nhwc_single_group_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u4:nhwc,u4:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,157696,18907136,119,0.0162406,9.04311,1164.19
+1,CUTLASS,conv2d,cutlass_tensorop_i16864fprop_optimized_s4_256x128_128x3_nhwc_single_group_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s4:nhwc,s4:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,157696,18907136,119,0.0162509,9.03741,1163.45
+1,CUTLASS,conv2d,cutlass_tensorop_i16832fprop_optimized_s8_256x128_64x3_nhwc_single_group_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nhwc,s8:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,249856,18907136,75,0.016343,14.2383,1156.89
+1,CUTLASS,conv2d,cutlass_tensorop_i16832fprop_optimized_u8_256x128_64x3_nhwc_single_group_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nhwc,u8:nhwc,s32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,249856,18907136,75,0.0163533,14.2293,1156.17
+1,CUTLASS,conv2d,cutlass_tensorop_u4_i8832fprop_optimized_u4_256x128_128x2_nc64hw64_align32,not_verified,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u4:nc64hw64,u4:c64rsk64,u4:nc64hw64,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,2,4,2,1,8,8,32,75,1024,100352,18907136,188,0.0170291,5.48825,1110.28
+1,CUTLASS,conv2d,cutlass_tensorop_s4_i8832fprop_optimized_s4_256x128_128x2_nc64hw64_align32,not_verified,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s4:nc64hw64,s4:c64rsk64,s4:nc64hw64,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,2,4,2,1,8,8,32,75,1024,100352,18907136,188,0.0170496,5.48166,1108.95
+1,CUTLASS,conv2d,cutlass_tensorop_s8_i8816fprop_optimized_s8_256x128_64x2_nc32hw32_align16,not_verified,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nc32hw32,s8:c32rsk32,s8:nc32hw32,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,2,4,2,1,8,8,16,75,1024,200704,18907136,94,0.0171418,10.9044,1102.99
+1,CUTLASS,conv2d,cutlass_tensorop_u8_i8816fprop_optimized_u8_256x128_64x2_nc32hw32_align16,not_verified,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nc32hw32,u8:c32rsk32,u8:nc32hw32,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,2,4,2,1,8,8,16,75,1024,200704,18907136,94,0.0171622,10.8914,1101.67
+1,CUTLASS,conv2d,cutlass_tensorop_u4_i16864fprop_optimized_u4_256x128_128x3_nc64hw64_align32,not_verified,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u4:nc64hw64,u4:c64rsk64,u4:nc64hw64,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,100352,18907136,188,0.0172954,5.40377,1093.19
+1,CUTLASS,conv2d,cutlass_tensorop_s4_i16864fprop_optimized_s4_256x128_128x3_nc64hw64_align32,not_verified,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s4:nc64hw64,s4:c64rsk64,s4:nc64hw64,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,100352,18907136,188,0.0173056,5.40057,1092.54
+1,CUTLASS,conv2d,cutlass_tensorop_s4_i8832fprop_optimized_s4_256x128_128x2_nhwc_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s4:nhwc,s4:nhwc,s4:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,2,4,2,1,8,8,32,75,1024,100352,18907136,188,0.0174285,5.36249,1084.84
+1,CUTLASS,conv2d,cutlass_tensorop_u4_i8832fprop_optimized_u4_256x128_128x2_nhwc_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u4:nhwc,u4:nhwc,u4:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,2,4,2,1,8,8,32,75,1024,100352,18907136,188,0.0174285,5.36249,1084.84
+1,CUTLASS,conv2d,cutlass_tensorop_s8_i16832fprop_optimized_s8_256x128_64x3_nc32hw32_align16,not_verified,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nc32hw32,s8:c32rsk32,s8:nc32hw32,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,200704,18907136,94,0.0174387,10.7187,1084.2
+1,CUTLASS,conv2d,cutlass_tensorop_u8_i16832fprop_optimized_u8_256x128_64x3_nc32hw32_align16,not_verified,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nc32hw32,u8:c32rsk32,u8:nc32hw32,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,200704,18907136,94,0.017449,10.7124,1083.57
+1,CUTLASS,conv2d,cutlass_tensorop_s8_i8816fprop_optimized_s8_256x128_64x2_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nhwc,s8:nhwc,s8:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,2,4,2,1,8,8,16,75,1024,200704,18907136,94,0.0175616,10.6437,1076.62
+1,CUTLASS,conv2d,cutlass_tensorop_u8_i8816fprop_optimized_u8_256x128_64x2_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nhwc,u8:nhwc,u8:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,2,4,2,1,8,8,16,75,1024,200704,18907136,94,0.0175718,10.6375,1075.99
+1,CUTLASS,conv2d,cutlass_tensorop_u4_i16864fprop_optimized_u4_256x128_128x3_nhwc_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u4:nhwc,u4:nhwc,u4:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,100352,18907136,188,0.0177357,5.26961,1066.05
+1,CUTLASS,conv2d,cutlass_tensorop_s4_i16864fprop_optimized_s4_256x128_128x3_nhwc_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s4:nhwc,s4:nhwc,s4:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,100352,18907136,188,0.0177562,5.26353,1064.82
+1,CUTLASS,conv2d,cutlass_tensorop_s8_i16832fprop_optimized_s8_256x128_64x3_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nhwc,s8:nhwc,s8:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,200704,18907136,94,0.01792,10.4308,1055.09
+1,CUTLASS,conv2d,cutlass_tensorop_s4_i16864fprop_optimized_s4_256x128_128x3_nhwc_single_group_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s4:nhwc,s4:nhwc,s4:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,100352,18907136,188,0.01792,5.21541,1055.09
+1,CUTLASS,conv2d,cutlass_tensorop_u8_i16832fprop_optimized_u8_256x128_64x3_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nhwc,u8:nhwc,u8:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,200704,18907136,94,0.0179302,10.4249,1054.48
+1,CUTLASS,conv2d,cutlass_tensorop_u4_i16864fprop_optimized_u4_256x128_128x3_nhwc_single_group_align32,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u4:nhwc,u4:nhwc,u4:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,128,,,,,,,3,4,2,1,16,8,64,80,1024,100352,18907136,188,0.0179405,5.20945,1053.88
+1,CUTLASS,conv2d,cutlass_tensorop_u8_i16832fprop_optimized_u8_256x128_64x3_nhwc_single_group_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nhwc,u8:nhwc,u8:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,200704,18907136,94,0.0179917,10.3893,1050.88
+1,CUTLASS,conv2d,cutlass_tensorop_s8_i16832fprop_optimized_s8_256x128_64x3_nhwc_single_group_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nhwc,s8:nhwc,s8:nhwc,cross,optimized,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,200704,18907136,94,0.0180122,10.3774,1049.69
+1,CUTLASS,conv2d,cutlass_tensorop_u8_i8816fprop_few_channels_u8_256x128_64x2_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nhwc,u8:nhwc,u8:nhwc,cross,few_channels,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,2,4,2,1,8,8,16,75,1024,200704,18907136,94,0.020777,8.99651,910.005
+1,CUTLASS,conv2d,cutlass_tensorop_s8_i8816fprop_few_channels_s8_256x128_64x2_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nhwc,s8:nhwc,s8:nhwc,cross,few_channels,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,2,4,2,1,8,8,16,75,1024,200704,18907136,94,0.0207872,8.99208,909.557
+1,CUTLASS,conv2d,cutlass_tensorop_u8_i16832fprop_few_channels_u8_256x128_64x3_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,u8:nhwc,u8:nhwc,u8:nhwc,cross,few_channels,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,200704,18907136,94,0.022743,8.21879,831.337
+1,CUTLASS,conv2d,cutlass_tensorop_s8_i16832fprop_few_channels_s8_256x128_64x3_nhwc_align16,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,s8:nhwc,s8:nhwc,s8:nhwc,cross,few_channels,1,0,serial,1,none,tensorop,s32,256,128,64,,,,,,,3,4,2,1,16,8,32,80,1024,200704,18907136,94,0.0227942,8.20032,829.47
+1,CUTLASS,conv2d,cutlass_tensorop_h1688fprop_optimized_256x128_32x2_nhwc_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f16:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f16,256,128,32,,,,,,,2,4,2,1,16,8,8,75,1024,401408,18907136,47,0.0261939,14.272,721.814
+1,CUTLASS,conv2d,cutlass_tensorop_h16816fprop_optimized_256x128_32x3_nhwc_single_group_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f16:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f16,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,401408,18907136,47,0.026368,14.1778,717.049
+1,CUTLASS,conv2d,cutlass_tensorop_h16816fprop_optimized_256x128_32x3_nhwc_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f16:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f16,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,401408,18907136,47,0.0265216,14.0957,712.896
+1,CUTLASS,conv2d,cutlass_tensorop_f16_s16816fprop_optimized_f16_256x128_32x3_nhwc_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f16:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,401408,18907136,47,0.0473498,7.8953,399.308
+1,CUTLASS,conv2d,cutlass_tensorop_s16816fprop_optimized_f16_256x128_32x3_nhwc_single_group_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,434176,18907136,43,0.0474624,8.51954,398.36
+1,CUTLASS,conv2d,cutlass_tensorop_s16816fprop_optimized_bf16_256x128_32x3_nhwc_single_group_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,bf16:nhwc,bf16:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,434176,18907136,43,0.0474726,8.5177,398.274
+1,CUTLASS,conv2d,cutlass_tensorop_f16_s16816fprop_optimized_f16_256x128_32x3_nhwc_single_group_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f16:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,401408,18907136,47,0.0474829,7.87316,398.188
+1,CUTLASS,conv2d,cutlass_tensorop_s16816fprop_optimized_f16_256x128_32x3_nhwc_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,434176,18907136,43,0.0475034,8.5122,398.017
+1,CUTLASS,conv2d,cutlass_tensorop_s16816fprop_optimized_bf16_256x128_32x3_nhwc_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,bf16:nhwc,bf16:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,434176,18907136,43,0.0475238,8.50853,397.845
+1,CUTLASS,conv2d,cutlass_tensorop_bf16_s16816fprop_optimized_bf16_256x128_32x3_nhwc_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,bf16:nhwc,bf16:nhwc,bf16:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,401408,18907136,47,0.0478003,7.82087,395.544
+1,CUTLASS,conv2d,cutlass_tensorop_bf16_s16816fprop_optimized_bf16_256x128_32x3_nhwc_single_group_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,bf16:nhwc,bf16:nhwc,bf16:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,401408,18907136,47,0.0479539,7.79582,394.277
+1,CUTLASS,conv2d,cutlass_tensorop_s1688bf16fprop_optimized_256x128_16x3_nhwc_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f32:nhwc,f32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,80,1024,802816,18907136,23,0.0483123,15.476,391.352
+1,CUTLASS,conv2d,cutlass_tensorop_s1688bf16fprop_optimized_256x128_16x3_nhwc_single_group_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f32:nhwc,f32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,80,1024,802816,18907136,23,0.048425,15.44,390.442
+1,CUTLASS,conv2d,cutlass_tensorop_s1688f16fprop_optimized_256x128_16x3_nhwc_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f32:nhwc,f32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,75,1024,802816,18907136,23,0.0484557,15.4302,390.194
+1,CUTLASS,conv2d,cutlass_tensorop_s1688f16fprop_optimized_256x128_16x3_nhwc_single_group_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f32:nhwc,f32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,75,1024,802816,18907136,23,0.0484557,15.4302,390.194
+1,CUTLASS,conv2d,cutlass_tensorop_s1688fprop_optimized_f16_256x128_32x2_nhwc_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,2,4,2,1,16,8,8,75,1024,434176,18907136,43,0.0501965,8.0555,376.663
+1,CUTLASS,conv2d,cutlass_tensorop_f16_s1688fprop_optimized_f16_256x128_32x2_nhwc_align8,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f16:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,2,4,2,1,16,8,8,75,1024,401408,18907136,47,0.051241,7.29573,368.985
+1,CUTLASS,conv2d,cutlass_tensorop_h1688fprop_few_channels_128x64_32x2_nhwc_align1,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f16:nhwc,cross,few_channels,1,0,serial,1,none,tensorop,f16,128,64,32,,,,,,,2,2,4,1,16,8,8,75,1024,401408,18907136,47,0.0563302,6.63658,335.648
+1,CUTLASS,conv2d,cutlass_tensorop_f16_s1688fprop_few_channels_f16_128x64_32x2_nhwc_align1,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f16:nhwc,cross,few_channels,1,0,serial,1,none,tensorop,f32,128,64,32,,,,,,,2,2,4,1,16,8,8,75,1024,401408,18907136,47,0.061655,6.06342,306.66
+1,CUTLASS,conv2d,cutlass_tensorop_s1688fprop_few_channels_f16_128x64_32x2_nhwc_align1,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f16:nhwc,f16:nhwc,f32:nhwc,cross,few_channels,1,0,serial,1,none,tensorop,f32,128,64,32,,,,,,,2,2,4,1,16,8,8,75,1024,434176,18907136,43,0.0617779,6.54535,306.05
+1,CUTLASS,conv2d,cutlass_tensorop_s1688fprop_optimized_tf32_256x128_16x3_nhwc_single_group_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,tf32:nhwc,tf32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,80,1024,802816,18907136,23,0.0889856,8.40227,212.474
+1,CUTLASS,conv2d,cutlass_tensorop_s1688fprop_optimized_tf32_256x128_16x3_nhwc_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,tf32:nhwc,tf32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,80,1024,802816,18907136,23,0.089129,8.38875,212.132
+1,CUTLASS,conv2d,cutlass_tensorop_s1688tf32fprop_optimized_256x128_16x3_nhwc_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f32:nhwc,f32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,80,1024,802816,18907136,23,0.0896717,8.33798,210.848
+1,CUTLASS,conv2d,cutlass_tensorop_s1688tf32fprop_optimized_256x128_16x3_nhwc_single_group_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f32:nhwc,f32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,80,1024,802816,18907136,23,0.0898867,8.31803,210.344
+1,CUTLASS,conv2d,cutlass_tensorop_tf32_s1688fprop_optimized_tf32_256x128_16x3_nhwc_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,tf32:nhwc,tf32:nhwc,tf32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,80,1024,802816,18907136,23,0.0950166,7.86894,198.988
+1,CUTLASS,conv2d,cutlass_tensorop_tf32_s1688fprop_optimized_tf32_256x128_16x3_nhwc_single_group_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,tf32:nhwc,tf32:nhwc,tf32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,16,,,,,,,3,4,2,1,16,8,8,80,1024,802816,18907136,23,0.0952115,7.85284,198.58
+1,CUTLASS,conv2d,cutlass_tensorop_s1688fprop_optimized_128x128_16x4_nhwc_single_group_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f32:nhwc,f32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,128,128,16,,,,,,,4,4,2,1,16,8,8,80,1024,802816,18907136,23,0.132618,5.63784,142.568
+1,CUTLASS,conv2d,cutlass_tensorop_s1688fprop_optimized_128x128_16x4_nhwc_align4,passed,success,fprop,1,16,16,64,64,3,3,16,16,1,1,1,1,1,1,1,f32:nhwc,f32:nhwc,f32:nhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,128,128,16,,,,,,,4,4,2,1,16,8,8,80,1024,802816,18907136,23,0.133069,5.61875,142.085
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv3d[0m
+       Operation: cutlass_tensorop_s16816fprop3d_optimized_f16_256x128_32x3
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --d=8 --h=14 --w=14 --c=32 --k=32 --t=3 --r=3 --s=3 --z=8 --p=14 --q=14 --pad_d=1  \
+                  --pad_h=1 --pad_w=1 --stride_d=1 --stride_h=1 --stride_w=1 --dilation_d=1 --dilation_h=1 --dilation_w=1  \
+                  --Activation=f16:ndhwc --Filter=f16:ndhwc --Output=f32:ndhwc --conv_mode=cross --iterator_algorithm=optimized  \
+                  --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop  \
+                  --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16  \
+                  --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 2965504  bytes
+           FLOPs: 86804480  flops
+           FLOPs/Byte: 29
+
+         Runtime: 0.0696832  ms
+          Memory: 39.6342 GiB/s
+
+            Math: 1245.7 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv3d[0m
+       Operation: cutlass_tensorop_f16_s16816fprop3d_optimized_f16_256x128_32x3
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --d=8 --h=14 --w=14 --c=32 --k=32 --t=3 --r=3 --s=3 --z=8 --p=14 --q=14 --pad_d=1  \
+                  --pad_h=1 --pad_w=1 --stride_d=1 --stride_h=1 --stride_w=1 --dilation_d=1 --dilation_h=1 --dilation_w=1  \
+                  --Activation=f16:ndhwc --Filter=f16:ndhwc --Output=f16:ndhwc --conv_mode=cross --iterator_algorithm=optimized  \
+                  --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop  \
+                  --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16  \
+                  --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 2865152  bytes
+           FLOPs: 86804480  flops
+           FLOPs/Byte: 30
+
+         Runtime: 0.0700518  ms
+          Memory: 38.0915 GiB/s
+
+            Math: 1239.15 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv3d[0m
+       Operation: cutlass_tensorop_h16816fprop3d_optimized_256x128_32x3
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --d=8 --h=14 --w=14 --c=32 --k=32 --t=3 --r=3 --s=3 --z=8 --p=14 --q=14 --pad_d=1  \
+                  --pad_h=1 --pad_w=1 --stride_d=1 --stride_h=1 --stride_w=1 --dilation_d=1 --dilation_h=1 --dilation_w=1  \
+                  --Activation=f16:ndhwc --Filter=f16:ndhwc --Output=f16:ndhwc --conv_mode=cross --iterator_algorithm=optimized  \
+                  --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop  \
+                  --accum=f16 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16  \
+                  --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 2865152  bytes
+           FLOPs: 86804480  flops
+           FLOPs/Byte: 30
+
+         Runtime: 0.0398131  ms
+          Memory: 67.0226 GiB/s
+
+            Math: 2180.3 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv3d[0m
+       Operation: cutlass_tensorop_s16816fprop3d_optimized_bf16_256x128_32x3
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --d=8 --h=14 --w=14 --c=32 --k=32 --t=3 --r=3 --s=3 --z=8 --p=14 --q=14 --pad_d=1  \
+                  --pad_h=1 --pad_w=1 --stride_d=1 --stride_h=1 --stride_w=1 --dilation_d=1 --dilation_h=1 --dilation_w=1  \
+                  --Activation=bf16:ndhwc --Filter=bf16:ndhwc --Output=f32:ndhwc --conv_mode=cross --iterator_algorithm=optimized  \
+                  --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop  \
+                  --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16  \
+                  --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 2965504  bytes
+           FLOPs: 86804480  flops
+           FLOPs/Byte: 29
+
+         Runtime: 0.069673  ms
+          Memory: 39.6401 GiB/s
+
+            Math: 1245.88 GFLOP/s
+
+
+
+=============================
+  Problem ID: 1
+
+        Provider: [1;37mCUTLASS[0m
+   OperationKind: [1;37mconv3d[0m
+       Operation: cutlass_tensorop_bf16_s16816fprop3d_optimized_bf16_256x128_32x3
+
+          Status: [1;37mSuccess[0m
+    Verification: [1;37mON[0m
+     Disposition: [0mNot verified[0m
+
+reference_device: Not run
+           cuDNN: Not run
+
+       Arguments: --conv_kind=fprop --n=1 --d=8 --h=14 --w=14 --c=32 --k=32 --t=3 --r=3 --s=3 --z=8 --p=14 --q=14 --pad_d=1  \
+                  --pad_h=1 --pad_w=1 --stride_d=1 --stride_h=1 --stride_w=1 --dilation_d=1 --dilation_h=1 --dilation_w=1  \
+                  --Activation=bf16:ndhwc --Filter=bf16:ndhwc --Output=bf16:ndhwc --conv_mode=cross --iterator_algorithm=optimized  \
+                  --alpha=1 --beta=0 --split_k_mode=serial --split_k_slices=1 --eq_gemm_provider=none --op_class=tensorop  \
+                  --accum=f32 --cta_m=256 --cta_n=128 --cta_k=32 --stages=3 --warps_m=4 --warps_n=2 --warps_k=1 --inst_m=16  \
+                  --inst_n=8 --inst_k=16 --min_cc=80 --max_cc=1024
+
+           Bytes: 2865152  bytes
+           FLOPs: 86804480  flops
+           FLOPs/Byte: 30
+
+         Runtime: 0.0704102  ms
+          Memory: 37.8976 GiB/s
+
+            Math: 1232.84 GFLOP/s
+
+
+=============================
+
+CSV Results:
+
+Problem,Provider,OperationKind,Operation,Disposition,Status,conv_kind,n,d,h,w,c,k,t,r,s,z,p,q,pad_d,pad_h,pad_w,stride_d,stride_h,stride_w,dilation_d,dilation_h,dilation_w,Activation,Filter,Output,conv_mode,iterator_algorithm,alpha,beta,split_k_mode,split_k_slices,eq_gemm_provider,op_class,accum,cta_m,cta_n,cta_k,cluster_m,cluster_n,cluster_k,cluster_m_fallback,cluster_n_fallback,cluster_k_fallback,stages,warps_m,warps_n,warps_k,inst_m,inst_n,inst_k,min_cc,max_cc,Bytes,Flops,Flops/Byte,Runtime,GB/s,GFLOPs
+1,CUTLASS,conv3d,cutlass_tensorop_h16816fprop3d_optimized_256x128_32x3,not_verified,success,fprop,1,8,14,14,32,32,3,3,3,8,14,14,1,1,1,1,1,1,1,1,1,f16:ndhwc,f16:ndhwc,f16:ndhwc,cross,optimized,1,0,serial,1,none,tensorop,f16,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,2865152,86804480,30,0.0398131,67.0226,2180.3
+1,CUTLASS,conv3d,cutlass_tensorop_s16816fprop3d_optimized_bf16_256x128_32x3,not_verified,success,fprop,1,8,14,14,32,32,3,3,3,8,14,14,1,1,1,1,1,1,1,1,1,bf16:ndhwc,bf16:ndhwc,f32:ndhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,2965504,86804480,29,0.069673,39.6401,1245.88
+1,CUTLASS,conv3d,cutlass_tensorop_s16816fprop3d_optimized_f16_256x128_32x3,not_verified,success,fprop,1,8,14,14,32,32,3,3,3,8,14,14,1,1,1,1,1,1,1,1,1,f16:ndhwc,f16:ndhwc,f32:ndhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,2965504,86804480,29,0.0696832,39.6342,1245.7
+1,CUTLASS,conv3d,cutlass_tensorop_f16_s16816fprop3d_optimized_f16_256x128_32x3,not_verified,success,fprop,1,8,14,14,32,32,3,3,3,8,14,14,1,1,1,1,1,1,1,1,1,f16:ndhwc,f16:ndhwc,f16:ndhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,2865152,86804480,30,0.0700518,38.0915,1239.15
+1,CUTLASS,conv3d,cutlass_tensorop_bf16_s16816fprop3d_optimized_bf16_256x128_32x3,not_verified,success,fprop,1,8,14,14,32,32,3,3,3,8,14,14,1,1,1,1,1,1,1,1,1,bf16:ndhwc,bf16:ndhwc,bf16:ndhwc,cross,optimized,1,0,serial,1,none,tensorop,f32,256,128,32,,,,,,,3,4,2,1,16,8,16,80,1024,2865152,86804480,30,0.0704102,37.8976,1232.84
