@@ -205,14 +205,15 @@ struct Options {
     cmd.get_cmd_line_argument("iterations", iterations);
     cmd.get_cmd_line_argument("tag", tag);
 
-    if (filter_size.h() == 3 && filter_size.w() == 3) {
-      padding = {1, 1, 1, 1};
-    }
-    else {
-      filter_size.h() = 1;
-      filter_size.w() = 1;
-      padding = {0, 0, 0, 0};
-    }
+    // if (filter_size.h() == 3 && filter_size.w() == 3) {
+    //   padding = {1, 1, 1, 1};
+    // }
+    // else {
+    //   filter_size.h() = 1;
+    //   filter_size.w() = 1;
+    //   padding = {0, 0, 0, 0};
+    // }
+    update(input_size, filter_size);
   }
 
   /// Print an explanation of the command-line arguments
