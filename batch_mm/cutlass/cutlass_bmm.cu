@@ -9,6 +9,12 @@
 #include <cutlass/util/reference/host/tensor_copy.h>
 #include <cutlass/util/tensor_view_io.h>
 
+constexpr int ALIGN = 8;
+
+int align(int n) {
+    return (n + ALIGN - 1) / ALIGN * ALIGN;
+}
+
 // CUDA API error checking
 #define CUDA_CHECK(err)                                                                            \
     do {                                                                                           \
@@ -89,9 +95,9 @@ int main(int argc, char* argv[]) {
     }
 
     const int batch_size = atoi(argv[1]);
-    const int M = atoi(argv[2]);
-    const int N = atoi(argv[3]);
-    const int K = atoi(argv[4]);
+    const int M = align(atoi(argv[2]));
+    const int N = align(atoi(argv[3]));
+    const int K = align(atoi(argv[4]));
 
     std::cout << "batch_size=" << batch_size << " M=" << M << " N=" << N << " K=" << K << std::endl;
 

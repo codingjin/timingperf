@@ -10,6 +10,8 @@
 #include "cutlass/util/tensor_view_io.h"
 #include "helper.h"
 
+#define ALIGN 8
+
 // Comparison function for qsort
 int compare_floats(const void* a, const void* b) {
     float fa = *(const float*)a;
@@ -236,9 +238,9 @@ int run()
 
 float timing(int M, int N, int K)
 {
-    const int length_m = M;
-    const int length_n = N;
-    const int length_k = K;
+    const int length_m = (M + ALIGN - 1) / ALIGN * ALIGN;
+    const int length_n = (N + ALIGN - 1) / ALIGN * ALIGN;
+    const int length_k = (K + ALIGN - 1) / ALIGN * ALIGN;
 
     // Create a tuple of problem size for matrix multiplication
     cutlass::gemm::GemmCoord problem_size(length_m, length_n, length_k);
