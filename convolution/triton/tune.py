@@ -19,16 +19,16 @@ args = parser.parse_args()
 arguments = dict(args.params)
 
 required_args = ['N', 'C', 'H', 'W', 'K', 'R', 'S']
-optional_args = {
-    'stride': 1,
-    'padding': 0,
-    'dilation': 1
-}
 #required_args = ['N', 'C', 'H', 'W', 'K', 'R', 'S', 'BLOCK_SIZE_M', 'BLOCK_SIZE_N', 'BLOCK_SIZE_K', 'GROUP_SIZE_M', 'num_warps']
 missing = [arg for arg in required_args if arg not in arguments]
 if missing:
     parser.error(f"The following required arguments are missing: {', '.join(missing)}")
 
+optional_args = {
+    'stride': 1,
+    'padding': 0,
+    'dilation': 1
+}
 # Apply default values for optional args if not provided
 for key, default_value in optional_args.items():
     if key not in arguments:
@@ -47,17 +47,43 @@ K, R, S = arguments['K'], arguments['R'], arguments['S']
 stride, padding, dilation = arguments['stride'], arguments['padding'], arguments['dilation']
 P, Q = (H + 2*padding - dilation*(R - 1) - 1)//stride + 1, (W + 2*padding - dilation*(S - 1) - 1)//stride + 1
 
-BLOCK_SIZE_M, BLOCK_SIZE_N, BLOCK_SIZE_K, GROUP_SIZE_M, num_warps = 128, 128, 32, 8, 4
 print(f"N={N} C={C} H={H} W={W}")
 print(f"K={K} R={R} S={S}")
 print(f"P={P} Q={Q}")
 print(f"stride={stride} padding={padding} dilation={dilation}")
-print(f"BLOCK_SIZE_M={BLOCK_SIZE_M} BLOCK_SIZE_N={BLOCK_SIZE_N} BLOCK_SIZE_K={BLOCK_SIZE_K} GROUP_SIZE_M={GROUP_SIZE_M} num_warps={num_warps}")
 
+def get_autotune_config():
+    
+    block_size_m = [32, 64, 128, 256]
+    block_size_n = [32, 64, 128, 256]
+    block_size_k = [16, 32, 64]
+    group_size_m = [4, 8, 16, 32]
+    num_warps_sizes = [4, 8, 16]
+    
+    """
+    block_size_m = [128]
+    block_size_n = [128]
+    block_size_k = [16]
+    group_size_m = [8]
+    num_warps_sizes = [4]
+    """
+
+    configs = []
+
+    for bm in block_size_m:
+        for bn in block_size_n:
+            if bm==256 and bn==256: 
+                continue
+
+            for bk in block_size_k:
+                for gzm in group_size_m:
+                    for nwarps in num_warps_sizes:
+                        configs.append(triton.Config({'BLOCK_SIZE_M': bm, 'BLOCK_SIZE_N': bn, 'BLOCK_SIZE_K': bk, 'GROUP_SIZE_M': gzm}, num_warps=nwarps))
+
+    return configs
 
 @triton.autotune(
-    configs = [triton.Config({'BLOCK_SIZE_M': BLOCK_SIZE_M, 'BLOCK_SIZE_N': BLOCK_SIZE_N, 'BLOCK_SIZE_K': BLOCK_SIZE_K, 'GROUP_SIZE_M': GROUP_SIZE_M}, 
-                              num_stages=2, num_warps=num_warps)],
+    configs = get_autotune_config(),
     key=['N', 'C', 'H', 'W', 'K', 'R', 'S', 'P', 'Q', 'stride', 'padding', 'dilation'],
 )
 @triton.jit
@@ -111,37 +137,14 @@ kernel = torch.randn(size=(K, C, R, S), dtype=torch.float16, device='cuda')
 output = torch.zeros(size=(N, K, P, Q), dtype=torch.float16, device='cuda')
 
 GEMM_M, GEMM_N, GEMM_K = N*P*Q, K, C*R*S
+print(f"GEMM_M={GEMM_M} GEMM_N={GEMM_N} GEMM_K={GEMM_K}")
 grid = lambda meta: (triton.cdiv(GEMM_M, meta['BLOCK_SIZE_M']) * triton.cdiv(GEMM_N, meta['BLOCK_SIZE_N']), )
 conv_kernel[grid](input, kernel, output, 
             N, C, H, W, K, R, S, P, Q, stride, padding, dilation, 
             GEMM_M, GEMM_N, GEMM_K)
 
+print(f"Best config:")
+print(conv_kernel.best_config)
 
+print(f"Complete\n")
 
-output_torch = torch.nn.functional.conv2d(input, kernel, stride=stride, padding=padding, dilation=dilation)
-
-print("Max diff: ", (output - output_torch).abs().max())
-
-"""
-# warm-up 3 rounds 
-for i in range(3):
-    conv_kernel[grid](input, kernel, output, 
-            N, C, H, W, K, R, S, P, Q, 
-            GEMM_M, GEMM_N, GEMM_K)
-# 9 rounds
-time_array = []
-for i in range(9):
-    start_torch = torch.cuda.Event(enable_timing=True)
-    end_torch = torch.cuda.Event(enable_timing=True)
-    start_torch.record()
-    conv_kernel[grid](input, kernel, output, 
-            N, C, H, W, K, R, S, P, Q, 
-            GEMM_M, GEMM_N, GEMM_K)
-    end_torch.record()
-    torch.cuda.synchronize()
-    torch_time = start_torch.elapsed_time(end_torch)
-    time_array.append(torch_time)
-
-median_time = statistics.median(time_array)
-print(f"Triton conv2d Performance is {2*0.000001*N*K*P*Q*C*R*S/median_time:.0f} GFLOPs\n")
-"""

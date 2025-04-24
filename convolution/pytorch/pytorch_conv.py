@@ -42,7 +42,7 @@ assert len(arguments) == 10
 N, C, H, W = arguments['N'], arguments['C'], arguments['H'], arguments['W']
 K, R, S = arguments['K'], arguments['R'], arguments['S']
 stride, padding, dilation = arguments['stride'], arguments['padding'], arguments['dilation']
-P, Q = H-R+1, W-S+1
+P, Q = (H + 2*padding - dilation*(R -1) - 1)//stride + 1, (W + 2*padding - dilation*(S - 1) - 1)//stride + 1
 
 print(f"N={N} C={C} H={H} W={W}")
 print(f"K={K} R={R} S={S}")
